@@ -10,9 +10,7 @@ public class Punto3 {
     @Test
     public void generarReporteSinVerificar(){
         var file = new File("reporte.txt");
-
         Reporte reporteSinVerificar = new ReporteSinVerificar(new GeneradorReporte("BOCAAA"));
-
         reporteSinVerificar.exportar(file);
 
 

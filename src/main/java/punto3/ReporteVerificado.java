@@ -2,11 +2,10 @@ package punto3;
 
 import java.io.File;
 
-public class ReporteVerificado implements Reporte {
-    private Reporte reporte;
+public class ReporteVerificado extends SuperReporte {
 
     public ReporteVerificado(Reporte reporte){
-        this.reporte = reporte;
+        super(reporte);
     }
 
     @Override
@@ -14,7 +13,7 @@ public class ReporteVerificado implements Reporte {
         if (file.exists()) {
             throw new RuntimeException("El archivo ya existe no se puede sobreescribir");
         } else {
-            reporte.exportar(file);
+            super.exportar(file);
         }
     }
 
