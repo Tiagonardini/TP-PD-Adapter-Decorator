@@ -16,6 +16,14 @@ public class Punto3 {
 
     }
     @Test
+    public void generarReporteSinVerificar1(){
+        var file = new File("reporte1.txt");
+        Reporte reporteSinVerificar = new ReporteSinVerificar(new GeneradorReporte("Gashinaaaa"));
+        reporteSinVerificar.exportar(file);
+
+
+    }
+    @Test
     public void generarReporteVerificado(){
         var file = new File("reporte.txt");
 
